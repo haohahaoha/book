@@ -1,27 +1,13 @@
 package hao;
 
+import hao.control.menuTestActionListener;
+import hao.view.Mianban;
+
 import javax.swing.*;
-import javax.swing.event.MenuEvent;
-import javax.swing.event.MenuListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
 
- class menuTestActionListener implements MenuListener {//设置菜单监听的方法
-    public void menuCanceled(MenuEvent arg0) {//取消菜单时调用
-
-    }
-    public void menuDeselected(MenuEvent arg0) {//取消某个菜单时调用
-
-    }
-    public void menuSelected(MenuEvent arg0) {//选择某个菜单时调用
-        JFrame information=new JFrame("作者");
-        information.setVisible(true);
-        // JOptionPane.showMessageDialog(null, "不能为空！", "消息!", 1);//这个是弹出框
- }
-}
 class MenuDemo implements ActionListener {//ActionListener是个事件监听接口用来监听菜单项，那菜单那？
     MenuDemo(){
         JFrame jfrm=new JFrame("便便签");//创建窗口名叫Menu Demo

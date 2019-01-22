@@ -1,4 +1,4 @@
-package hao;
+package hao.view;
 
 import javax.swing.*;
 import java.awt.*;

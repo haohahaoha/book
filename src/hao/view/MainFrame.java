@@ -1,6 +1,7 @@
 package hao.view;
 
-import hao.control.menuTestActionListener;
+import hao.constant.Constant;
+import hao.control.MyMenuListener;
 
 import javax.swing.*;
 import java.awt.*;
@@ -10,26 +11,23 @@ import java.awt.event.ActionListener;
 public class MainFrame implements ActionListener {//ActionListener是个事件监听接口用来监听菜单项，那菜单那？
 
     public MainFrame() {
-        JFrame jfrm=new JFrame("便便签");//创建窗口名叫Menu Demo
+        JFrame jfrm = new JFrame(Constant.title);//创建窗口名叫Menu Demo
         jfrm.setBackground(Color.yellow);
         jfrm.setAlwaysOnTop(true);//设置总在顶端显示
         Mianban m=new Mianban();
+        //TODO 替换所有常量
         jfrm.setSize(300,500);//设置窗口大小
         jfrm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//设置虚拟机的关闭
         JMenuBar jmb=new JMenuBar();//创建顶级菜单（菜单的容器）
         JMenu jmFile=new JMenu("文件");//创建一个菜单
-        jmFile.addMenuListener(new menuTestActionListener());
+        jmFile.addMenuListener(new MyMenuListener());
         jfrm.setVisible(false);
 
-//       JMenuItem jmiOpen=new JMenuItem("打开");//创建菜单项叫Open
-//        JMenuItem jmiClose=new JMenuItem("Close");//创建菜单项叫Close
-//        JMenuItem jmiSave=new JMenuItem("保存");
-//        JMenuItem jmiExit=new JMenuItem("退出");//创建菜单项叫Exit
-//        jmFile.add(jmiOpen);/*把选项添加进菜单里*/
-//        jmFile.add(jmiClose);
-//        jmFile.add(jmiSave);
-//        jmFile.addSeparator();
-//        jmFile.add(jmiExit);
+        JMenuItem jmiOpen = new JMenuItem("打开");//创建菜单项叫Open
+        JMenuItem jmiSave = new JMenuItem("保存");
+        jmFile.add(jmiOpen);/*把选项添加进菜单里*/
+        jmFile.add(jmiSave);
+        jmFile.addSeparator();
         jmb.add(jmFile);//把菜单添加进菜单容器里
         JMenu jmFile1=new JMenu("编辑");
         JMenuItem jmiziti=new JMenuItem("字体");

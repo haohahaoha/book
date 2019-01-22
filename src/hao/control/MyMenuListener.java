@@ -2,9 +2,8 @@ package hao.control;
 
 import javax.swing.*;
 import javax.swing.event.MenuEvent;
-import javax.swing.event.MenuListener;
 
-public class menuTestActionListener implements MenuListener {//设置菜单监听的方法
+public class MyMenuListener implements javax.swing.event.MenuListener {//设置菜单监听的方法
 
     public void menuCanceled(MenuEvent arg0) {//取消菜单时调用
 

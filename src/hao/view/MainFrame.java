@@ -11,7 +11,7 @@ import java.awt.event.ActionListener;
 public class MainFrame implements ActionListener {//ActionListener是个事件监听接口用来监听菜单项，那菜单那？
 
     public MainFrame() {
-        JFrame jfrm = new JFrame(Constant.title);//创建窗口名叫Menu Demo
+        JFrame jfrm = new JFrame(Constant.title);
         jfrm.setBackground(Color.yellow);
         jfrm.setAlwaysOnTop(true);//设置总在顶端显示
         Mianban m=new Mianban();
@@ -21,9 +21,8 @@ public class MainFrame implements ActionListener {//ActionListener是个事件�
         JMenuBar jmb=new JMenuBar();//创建顶级菜单（菜单的容器）
         JMenu jmFile=new JMenu("文件");//创建一个菜单
         jmFile.addMenuListener(new MyMenuListener());
-        jfrm.setVisible(false);
 
-        JMenuItem jmiOpen = new JMenuItem("打开");//创建菜单项叫Open
+        JMenuItem jmiOpen = new JMenuItem("打开");
         JMenuItem jmiSave = new JMenuItem("保存");
         jmFile.add(jmiOpen);/*把选项添加进菜单里*/
         jmFile.add(jmiSave);
@@ -48,7 +47,6 @@ public class MainFrame implements ActionListener {//ActionListener是个事件�
         JMenu jmFile3=new JMenu("皮肤");
         jmb.add(jmFile3);
         jmFile3.addActionListener(this);
-        //jfrm.add(jlab);//给窗口添加标签，为什么要添加标签？
         jfrm.setJMenuBar(jmb);//菜单栏必须通过调用setJMenuBar()添加到框架中
         jfrm.add(m);
         jfrm.setVisible(true);

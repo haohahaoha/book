@@ -14,48 +14,77 @@ public class MainFrame implements ActionListener {//ActionListener是个事件�
         JFrame jfrm = new JFrame(Constant.title);
         jfrm.setBackground(Color.yellow);
         jfrm.setAlwaysOnTop(true);//设置总在顶端显示
-        Mianban m=new Mianban();
+        Mianban m = new Mianban();
         //TODO 替换所有常量
-        jfrm.setSize(300,500);//设置窗口大小
+        jfrm.setSize(300, 500);//设置窗口大小
+        JTabbedPane jtp = new JTabbedPane();
+        jtp.addTab("文件", new NewPanel());
+        jtp.addTab("编辑", new CitiesPanel());
+        jtp.addTab("总结", new ColorsPanel());
+        jtp.addTab("皮肤", new FlavorsPanel());
+        jfrm.add(jtp);
         jfrm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//设置虚拟机的关闭
-        JMenuBar jmb=new JMenuBar();//创建顶级菜单（菜单的容器）
-        JMenu jmFile=new JMenu("文件");//创建一个菜单
-        jmFile.addMenuListener(new MyMenuListener());
-
-        JMenuItem jmiOpen = new JMenuItem("打开");
-        JMenuItem jmiSave = new JMenuItem("保存");
-        jmFile.add(jmiOpen);/*把选项添加进菜单里*/
-        jmFile.add(jmiSave);
-        jmFile.addSeparator();
-        jmb.add(jmFile);//把菜单添加进菜单容器里
-        JMenu jmFile1=new JMenu("编辑");
-        JMenuItem jmiziti=new JMenuItem("字体");
-        JMenuItem jmicolor=new JMenuItem("颜色");
-        jmFile1.add(jmiziti);
-        jmFile1.add(jmicolor);
-        jmb.add(jmFile1);
-        jmiziti.addActionListener(this);
-        jmicolor.addActionListener(this);
-        JMenu jmFile2=new JMenu("总结");
-        JMenuItem jmiMonthly=new JMenuItem("月总结");
-        JMenuItem jmiyear=new JMenuItem("年总结");
-        jmFile2.add(jmiMonthly);
-        jmFile2.add(jmiyear);
-        jmb.add(jmFile2);
-        jmiMonthly.addActionListener(this);
-        jmiyear.addActionListener(this);
-        JMenu jmFile3=new JMenu("皮肤");
-        jmb.add(jmFile3);
-        jmFile3.addActionListener(this);
-        jfrm.setJMenuBar(jmb);//菜单栏必须通过调用setJMenuBar()添加到框架中
         jfrm.add(m);
         jfrm.setVisible(true);
-    }
-    public void actionPerformed(ActionEvent ae){//实现监听
-        String comStr=ae.getActionCommand();
+        public void actionPerformed(ActionEvent ae){//实现监听
+            String comStr=ae.getActionCommand();
 
-        if(comStr.equals("退出"))System.exit(0);
+            if(comStr.equals("退出"))System.exit(0);
+        }
     }
+        class NewPanel extends JPanel{
+            public NewPanel(){
+//            JFrame information=new JFrame("上上签信息");
+//            JPanel inform=new JPanel();
+//            information.add(inform);
+//            information.setVisible(true);
+            }
+            public void paint(Graphics g){
+                super.paint(g);
+                g.drawString("产品信息",10,70);
+                g.drawString("用户信息",10,80);
+                g.drawString("注销",10,98);
+                g.drawString("切换用户",10,110);
+            }
+        }
+        class CitiesPanel extends JPanel{
+            public CitiesPanel(){
+                JComboBox<String> jcb=new JComboBox<String>();
+                jcb.addItem("微软雅黑");
+                jcb.addItem("楷体");
+                jcb.addItem("宋体");
+                add(jcb);
+                JComboBox<String> jcb1=new JComboBox<String>();
+                jcb1.addItem("黑色");
+                jcb1.addItem("红色");
+                jcb1.addItem("白色");
+                add(jcb1);
+
+            }
+        }
+        class ColorsPanel extends JPanel{
+            public ColorsPanel(){
+                JButton b1=new JButton("周总结");
+                add(b1);
+                JButton b2=new JButton("月总结");
+                add(b2);
+                JButton b3=new JButton("年总结");
+                add(b3);
+            }
+        }
+        class FlavorsPanel extends JPanel{
+            public FlavorsPanel(){
+                JComboBox<String> jcb2=new JComboBox<String>();
+                jcb2.addItem("你猜");
+                jcb2.addItem("你再猜");
+                jcb2.addItem("呵呵呵");
+                add(jcb2);
+            }
+        }
+        public void actionPerformed(ActionEvent ae){//实现监听
+            String comStr=ae.getActionCommand();
+            if(comStr.equals("退出"))System.exit(0);
+        }
 }
 
 

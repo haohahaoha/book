@@ -15,6 +15,7 @@ public class Mianban extends JPanel {
             j1.setBounds(30,330,230,50);
             //j1.setBackground(Color.red);
             this.add(j1);
+
         }
         public void paint(Graphics g){
             g.setFont(new Font("楷体",Font.BOLD,15));

@@ -26,6 +26,7 @@ class MenuDemo implements ActionListener {//ActionListener是个事件监听接�
     MenuDemo(){
         JFrame jfrm=new JFrame("便便签");//创建窗口名叫Menu Demo
         jfrm.setBackground(Color.yellow);
+        jfrm.setAlwaysOnTop(true);//设置总在顶端显示
         Mianban m=new Mianban();
         jfrm.setSize(300,500);//设置窗口大小
         jfrm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//设置虚拟机的关闭

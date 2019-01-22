@@ -1,5 +1,7 @@
 package hao;
 
+import hao.view.MainFrame;
+
 import javax.swing.*;
 
 public class Main {
@@ -7,7 +9,7 @@ public class Main {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                new MenuDemo();
+                new MainFrame();
             }
         });
     }

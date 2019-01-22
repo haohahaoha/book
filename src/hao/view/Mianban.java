@@ -9,7 +9,7 @@ public class Mianban extends JPanel {
         public Mianban(){
             this.setLayout(null);//设置流式布局
             j.setBounds(40, 120, 200, 200);//文本框定位
-            //j.setOpaque(false);//设置背景透明
+            j.setOpaque(false);//设置背景透明
             //this.setBackground(Color.orange);//文本框背景颜色
             this.add(j);
             j1.setBounds(30,330,230,50);

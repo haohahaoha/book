@@ -1,15 +1,15 @@
-package hao;
+package hao.view;
 
 import hao.control.menuTestActionListener;
-import hao.view.Mianban;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-class MenuDemo implements ActionListener {//ActionListener是个事件监听接口用来监听菜单项，那菜单那？
-    MenuDemo(){
+public class MainFrame implements ActionListener {//ActionListener是个事件监听接口用来监听菜单项，那菜单那？
+
+    public MainFrame() {
         JFrame jfrm=new JFrame("便便签");//创建窗口名叫Menu Demo
         jfrm.setBackground(Color.yellow);
         jfrm.setAlwaysOnTop(true);//设置总在顶端显示

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="400.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hao.Main">
+   <children>
+      <TabPane prefHeight="65.0" prefWidth="300.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="文件">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="20.0" prefWidth="300.0" />
+            </content>
+          </Tab>
+          <Tab text="编辑">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+            <Tab text="皮肤">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="9.0" prefWidth="300.0">
+                     <children>
+                        <ColorPicker layoutX="127.0" layoutY="2.0" />
+                        <Label layoutX="48.0" layoutY="6.0" text="皮肤颜色选择" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="总结">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button layoutX="14.0" layoutY="2.0" mnemonicParsing="false" text="日总结" />
+                        <Button layoutX="73.0" layoutY="2.0" mnemonicParsing="false" text="周总结" />
+                        <Button layoutX="133.0" layoutY="2.0" mnemonicParsing="false" text="月总结" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="关于">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="70.0" prefWidth="300.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="2.0" prefHeight="19.0" prefWidth="287.0" text="v0.01" textAlignment="CENTER" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <AnchorPane layoutX="2.0" layoutY="58.0" prefHeight="340.0" prefWidth="300.0">
+         <children>
+            <VBox prefHeight="270.0" prefWidth="300.0">
+               <children>
+                  <HBox prefHeight="27.0" prefWidth="283.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="22.0" prefWidth="31.0" text="1" textAlignment="CENTER" textOverrun="CLIP" />
+                        <TextField prefHeight="23.0" prefWidth="217.0" />
+                        <CheckBox mnemonicParsing="false" prefHeight="21.0" prefWidth="33.0" text="完" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="10.0" prefHeight="27.0" prefWidth="283.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="22.0" prefWidth="31.0" text="2" textAlignment="CENTER" />
+                        <TextField prefHeight="23.0" prefWidth="217.0" />
+                        <CheckBox mnemonicParsing="false" prefHeight="21.0" prefWidth="33.0" text="完" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="37.0" prefHeight="27.0" prefWidth="283.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="22.0" prefWidth="31.0" text="3" />
+                        <TextField prefHeight="23.0" prefWidth="217.0" />
+                        <CheckBox mnemonicParsing="false" prefHeight="21.0" prefWidth="33.0" text="完" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="64.0" prefHeight="27.0" prefWidth="283.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="22.0" prefWidth="31.0" text="4" />
+                        <TextField prefHeight="23.0" prefWidth="217.0" />
+                        <CheckBox mnemonicParsing="false" prefHeight="21.0" prefWidth="33.0" text="完" />
+                     </children>
+                  </HBox>
+                  <Label alignment="CENTER" prefHeight="111.0" prefWidth="297.0" text="今天也要加油哦!" />
+               </children>
+            </VBox>
+            <TextField layoutX="62.0" layoutY="270.0" prefHeight="23.0" prefWidth="177.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
